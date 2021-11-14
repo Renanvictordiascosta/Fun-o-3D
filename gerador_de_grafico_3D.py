@@ -55,54 +55,56 @@ class grafico_3D:
             sleep(3)
 
             while True:
+                
+                try:
 
-                print("As suas opções são:")
-
-                sleep(2)
-
-                print("[ 1 ] Inserir os limites do gráfico")
-
-                sleep(2)
-
-                print("[ 2 ] Sair")
-
-                sleep(2)
-
-                opcao = int(input("Digite sua opção: "))
-
-                if opcao == 1:
-
-                    comeca_x = 0
-                    comeca_y = 0
-                    termina_x = 0
-                    termina_y = 0
-
-                    grafico_recebedor = grafico_3D(comeca_x, comeca_y, termina_x, termina_y)
-                    grafico_recebedor.inserir_e_mostrar_limite_grafico_3D()
-
-                elif opcao == 2:
-
-                    print("Tudo bem, entendo que tenha encerrado o programa.")
+                    print("As suas opções são:")
 
                     sleep(2)
 
-                    print("Tenha um bom dia!")
+                    print("[ 1 ] Inserir os limites do gráfico")
 
                     sleep(2)
 
-                    break
+                    print("[ 2 ] Sair")
 
-                else:
+                    sleep(2)
 
-                    print("Sinto muito mas a sua opção foi inválida. Tente novamente!")
+                    opcao = int(input("Digite sua opção: "))
 
-                    sleep(3)
+                    if opcao == 1:
 
-        except ValueError:
+                        comeca_x = 0
+                        comeca_y = 0
+                        termina_x = 0
+                        termina_y = 0
 
-            print("A opção inserida não tem um valor válido. Tente novamente!")
+                        grafico_recebedor = grafico_3D(comeca_x, comeca_y, termina_x, termina_y)
+                        grafico_recebedor.inserir_e_mostrar_limite_grafico_3D()
 
-            sleep(2)
+                    elif opcao == 2:
+
+                        print("Tudo bem, entendo que tenha encerrado o programa.")
+
+                        sleep(2)
+
+                        print("Tenha um bom dia!")
+
+                        sleep(2)
+
+                        break
+
+                    else:
+
+                        print("Sinto muito mas a sua opção foi inválida. Tente novamente!")
+
+                        sleep(3)
+
+                except ValueError:
+
+                    print("A opção inserida não tem um valor válido. Tente novamente!")
+
+                    sleep(2)
 
         except KeyboardInterrupt:
 
